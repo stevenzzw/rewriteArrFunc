@@ -39,7 +39,7 @@ Array.prototype.ourReduce = function (cb, initValue) {
 
   for (let i = newIndex; i < this.length; i++) {
     
-    pre = cb(pre, cur);
+    pre = cb(pre, this[i]);
    
   }
 
