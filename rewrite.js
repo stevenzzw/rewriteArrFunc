@@ -28,7 +28,7 @@ Array.prototype.ourFilter = function (cb) {
 
 
 Array.prototype.ourReduce = function (cb, initValue) {
-  let pre, cur, newIndex = 0;
+  let pre,newIndex = 0;
   if (initValue === undefined) {
     pre = this[0];
     newIndex = 1;
@@ -38,9 +38,9 @@ Array.prototype.ourReduce = function (cb, initValue) {
   }
 
   for (let i = newIndex; i < this.length; i++) {
-    cur = this[i];
-    pre = cb(pre, cur);
     
+    pre = cb(pre, cur);
+   
   }
 
   return pre;
